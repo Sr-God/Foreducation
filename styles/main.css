@@ -1,0 +1,43 @@
+/* Переделать цвета для светлой / тёмной темы */
+/* Дописать таблицу / форму редактирования */
+/* Адаптивная таблица через data */
+/* фильтры в строке "фильтры" */
+/* валидация */
+/* кнопка на входе анимированная */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url(leftAside.css);
+@import url(rightArticle.css);
+@import url(filters/filters.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Shippori Antique', sans-serif;
+    background: var(--bodyBackground);
+}
+:root{
+    --white: whitesmoke;
+    --black: #000;
+    --redOrange: rgb(233,52,5);
+    --lightOrange: rgb(246,134,33);
+    --gradientO: linear-gradient(to bottom, rgb(246,134,33) 5%, rgb(246,134,33) 5%, rgb(233,52,5) 100%);
+    --bodyBackground: linear-gradient(#181a1b 50%, #6e6f6f);
+    --tableBackground: rgb(27,25,24);
+    --navBackground: rgba(40,39,38, 0.8);
+    --loginImageBg: center / contain no-repeat url(../media/bg-authorization-dark.png);
+    --navImageBg: center / contain no-repeat url(../media/bg-nav-dark.png);
+}
+.dark{
+    --white: #000;
+    --black: whitesmoke;
+    --redOrange: #549E7C;
+    --lightOrange: rgb(64, 229, 199);
+    --gradientO: linear-gradient(to bottom, #179C85 5%, #179C85 5%, #48CCB6 100%);
+    --bodyBackground: linear-gradient(to bottom, #ECD8CA 50%, #FBB484);
+    --tableBackground: #F0EBE8;
+    --navBackground: rgba(234, 143, 73, 0.8);
+    --loginImageBg: center / contain no-repeat url(../media/bg-authorization-light.png);
+    --navImageBg: center / contain no-repeat url(../media/bg-nav-light.png);
+}

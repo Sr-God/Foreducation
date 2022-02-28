@@ -1,0 +1,99 @@
+aside{
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:var(--redOrange) 0 0 20px 1px;
+    background: center / cover no-repeat url("../media/bg-article.png");
+}
+/* Logo */
+aside .logo{
+    display: block;
+    width: 90%;
+    height: 100px;
+    background: center / contain no-repeat url("../media/logo.png");
+}
+/* Nav */
+aside nav{
+    width: 90%;
+    min-height: 360px;
+    padding: 18px 20px;
+    background-color: var(--navBackground);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+/* Nav a */
+aside nav a{
+    font-size: 1.1em;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--redOrange);
+    line-height: 30px;
+    text-decoration: none;
+    color: var(--white);
+    transition: .2s;
+    text-transform: uppercase;
+}
+aside nav a:active > i.fa{
+    transform: translateY(-5px);
+}
+aside nav a.active{
+    color: var(--redOrange);
+    text-shadow: var(--redOrange);
+}
+aside nav a:hover{
+    color: var(--lightOrange);
+}
+aside nav a:last-child{
+    border: none;
+}
+/* Icons */
+.fa{
+    width: 25px;
+    height: 25px;
+    text-shadow: none;
+    padding-right: 5px;
+    transition: .1s;
+}
+/* User */
+aside .user{
+    width: 100%;
+    min-height: 120px;
+    margin-bottom: 50px;
+    border-top: 1px dashed #2A2928;
+    border-bottom: 1px dashed #2A2928;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+}
+
+/* User avatar */
+aside .user .avatar{
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+    border: 1px solid var(--redOrange);
+    background: center / contain no-repeat url("https://user-images.githubusercontent.com/30195/34457818-8f7d8c76-ed82-11e7-8474-3825118a776d.png") ;
+}
+
+/* User info */
+aside .user .info{
+    height: 75%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+aside .user .info p{
+    color: var(--white);
+}
+/* Button exit */
+.exit{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}

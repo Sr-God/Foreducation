@@ -1,0 +1,8 @@
+.filters-table{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+.filters-table .filters-button{
+    width: 30%;
+}

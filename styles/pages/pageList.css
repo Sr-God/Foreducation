@@ -6,7 +6,7 @@ body{
     flex-flow: row nowrap;
 }
 article{
-    width: 53%;
+    width: 85%;
 }
 .add-student{
     border-radius: 20px;

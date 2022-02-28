@@ -98,25 +98,8 @@ aside .user .info p{
     flex-flow: column wrap;
     position: relative;
 }
-.settings #themeSwitch{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: var(--navBackground);
-    color: var(--white);
-    border: 1px solid var(--redOrange);
-}
-#themeSwitch::before{
-    content: '\f186';
-    font-family: fontAwesome;
-    font-size: 30px;
-}
-#themeSwitch.active::before{
-    content: '\f185';
-}
 .settings .exit{
     position: absolute;
-    bottom: -30px;
+    bottom: -50px;
+    right: 0;
 }

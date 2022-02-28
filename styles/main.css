@@ -13,6 +13,7 @@
 body{
     font-family: 'Shippori Antique', sans-serif;
     background: var(--bodyBackground);
+    position: relative;
 }
 :root{
     --white: rgb(212, 212, 212);

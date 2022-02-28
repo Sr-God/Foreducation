@@ -29,6 +29,7 @@ body{
     --navBackground: rgba(40,39,38, 0.8);
     --loginImageBg: center / contain no-repeat url(../../media/bg-authorization-dark.png);
     --navImageBg: center / cover no-repeat url(../media/bg-nav-dark.png);
+    --themeSwitch: rgba(87,87,87,0.5);
 }
 .dark{
     --white: #000;
@@ -44,4 +45,5 @@ body{
     --navBackground: rgba(234, 143, 73, 0.52);
     --loginImageBg: center / contain no-repeat url(../../media/bg-authorization-light.png);
     --navImageBg: center / cover no-repeat url(../media/bg-nav-light.png);
+    --themeSwitch: rgba(244,119,34,0.5);
 }

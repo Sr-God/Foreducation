@@ -16,6 +16,10 @@ article{
     border: none;
     background: none;
     color: var(--white);
+    transition: .3s;
+}
+#themeSwitch:hover{
+    background: var(--themeSwitch);
 }
 #themeSwitch::before{
     content: '\f185';

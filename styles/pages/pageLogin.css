@@ -103,15 +103,25 @@ form button[type='submit']{
     position: absolute;
     right: 175px;
     font-size: 1.3em;
-    background: linear-gradient(#f37521, #e93605);
+    background: var(--gradientO);
     border-radius: 50%;
     width: 100px;
     padding-right: 10px;
-    min-height: 100px;
+    height: 100px;
     text-align: center;
     bottom: -200px;
     border: 0;
     box-shadow: 0 5px 5px 3px #2d3133;
+    transition: .5s;
+}
+form button[type='submit']:hover{
+    width: 100px;
+    height: 75px;
+    border-radius: 20px;
+}
+form button[type='submit']:hover::after{
+    background: center / contain no-repeat url("../../media/door-open.png");
+    top: 10px;
 }
 form button[type='submit']::after{
     content: '';
@@ -122,7 +132,8 @@ form button[type='submit']::after{
     background-color: #acacac;
     top: 20px;
     right: 20px;
-    background: center / contain no-repeat url("../media/door-closed.png");
+    background: center / contain no-repeat url("../../media/door-closed.png");
+    transition: .5s;
 }
 .buttons{
     display: flex;

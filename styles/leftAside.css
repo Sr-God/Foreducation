@@ -5,7 +5,7 @@ aside{
     justify-content: space-between;
     align-items: center;
     box-shadow:var(--redOrange) 0 0 20px 1px;
-    background: center / cover no-repeat url("../media/bg-article.png");
+    background: var(--navImageBg);
 }
 /* Logo */
 aside .logo{
@@ -28,6 +28,7 @@ aside nav{
 /* Nav a */
 aside nav a{
     font-size: 1.1em;
+    font-weight: 600;
     padding: 5px 0;
     border-bottom: 1px dashed var(--redOrange);
     line-height: 30px;
@@ -41,7 +42,7 @@ aside nav a:active > i.fa{
 }
 aside nav a.active{
     color: var(--redOrange);
-    text-shadow: var(--redOrange);
+    text-shadow: var(--redOrange) 0 0 5px;
 }
 aside nav a:hover{
     color: var(--lightOrange);
@@ -50,7 +51,7 @@ aside nav a:last-child{
     border: none;
 }
 /* Icons */
-.fa{
+nav .fa{
     width: 25px;
     height: 25px;
     text-shadow: none;
@@ -60,12 +61,13 @@ aside nav a:last-child{
 /* User */
 aside .user{
     width: 100%;
-    min-height: 120px;
+    min-height: 130px;
     margin-bottom: 50px;
     border-top: 1px dashed #2A2928;
     border-bottom: 1px dashed #2A2928;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
 }
@@ -74,7 +76,6 @@ aside .user{
 aside .user .avatar{
     width: 50px;
     height: 50px;
-    margin: 0 15px 0 15px;
     border-radius: 50%;
     border: 1px solid var(--redOrange);
     background: center / contain no-repeat url("https://user-images.githubusercontent.com/30195/34457818-8f7d8c76-ed82-11e7-8474-3825118a776d.png") ;
@@ -85,15 +86,37 @@ aside .user .info{
     height: 75%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
-    padding: 20px 0;
+    margin: 0 10px;
 }
 aside .user .info p{
     color: var(--white);
+    padding: 10px 0;
 }
-/* Button exit */
-.exit{
+.settings{
+    height: inherit;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+.settings #themeSwitch{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--navBackground);
+    color: var(--white);
+    border: 1px solid var(--redOrange);
+}
+#themeSwitch::before{
+    content: '\f186';
+    font-family: fontAwesome;
+    font-size: 30px;
+}
+#themeSwitch.active::before{
+    content: '\f185';
+}
+.settings .exit{
     position: absolute;
-    bottom: 10px;
-    right: 20px;
+    bottom: -30px;
 }

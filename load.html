@@ -27,10 +27,13 @@
             <div class="avatar"></div>
             <div class="info">
                 <span class="nameUser">Имя Фамилия</span>
-                <p>Роль: <span class="role">Администратор</span></p>
+                <p>Роль: <span class="role">Администратор</span></p>    
+            </div>
+            <div class="settings">
+                <button id="themeSwitch">
+                </button>
                 <a href="index.html" class="exit">Выйти</a>
             </div>
-            
         </div>
     </aside>
     <article class="right">
@@ -42,21 +45,21 @@
                 <div class="filters-table">
                     <!-- --------- FILTER --------- -->
                     <input id="fields" type="checkbox">
-                    <label class="filters-button" for="fields">Поля <i class="fa fa-caret-right"></i></label>
+                    <label class="button-fields filters-button" for="fields">Поля <i class="fa fa-angle-down"></i></label>
                     <!-- --------- SUB-FILTER --------- -->
                     <div class="sub_filter sub_fields">
-
+                        
                     </div>
                     <!-- --------- FILTER --------- -->
                     <input id="hours" type="checkbox">
-                    <label class="filters-button" for="hours">Тип часов <i class="fa fa-caret-right"></i></label>
+                    <label class="button-hours filters-button" for="hours">Тип часов <i class="fa fa-angle-down"></i></label>
                     <!-- --------- SUB-FILTER --------- -->
                     <div class="sub_filter sub_hours">
-
+                        
                     </div>
                     <!-- --------- FILTER --------- -->
                     <input id="sort" type="checkbox">
-                    <label class="filters-button" for="sort">Тип часов <i class="fa fa-caret-right"></i></label>
+                    <label class="button-sort filters-button" for="sort">Сортировать <i class="fa fa-angle-down"></i></label>
                     <!-- --------- SUB-FILTER --------- -->
                     <div class="sub_filter sub_sort">
                         <a href="?sortby=teachers">Преподаватель</a>
@@ -298,5 +301,14 @@
             </section>
         </section>
     </article>
+    <script>
+        body = document.querySelector('body');
+        themeSwitch = document.querySelector('#themeSwitch');
+        
+        themeSwitch.addEventListener('click', function(){
+            body.classList.toggle("dark");
+            themeSwitch.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

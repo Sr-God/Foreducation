@@ -9,7 +9,7 @@ article{
 #table-wrapper {
     position:relative;
     border-radius: 20px;
-    border:2px solid var(--redOrange);
+    border:2px solid var(--tableBorder);
     width: 90%;
 }
 #table-wrapper table {
@@ -29,10 +29,10 @@ article{
 table thead{
     color:var(--white);
     height: 40px;
-    background-color: rgb(90,52,27);
+    background: var(--tableThead);
 }
 table td{
-    border:1px solid rgba(233,53,5,0.5);
+    border:1px solid var(--tableTd);
     padding: 10px 15px;
     text-align: center;
     font-size: 1.1em;

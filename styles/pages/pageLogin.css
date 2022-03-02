@@ -4,17 +4,18 @@ body{
     display: grid;
     place-items: center;
     overflow: hidden;
+    position: relative;
 }
 /* Main */
 main{
     display: flex;
     position: relative;
     background: var(--loginImageBg);
-    background-size: 960px 505px;
+    background-size: 1100px 505px;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
-    width: 950px;
+    width: 1080px;
     min-height: 490px;
     border: 1px solid #6b6a69;
     border-radius: 10px;
@@ -61,15 +62,6 @@ form p{
     font-size: 1.3em;
     letter-spacing: 0.8px;
 }
-form p a{
-    text-decoration: none;
-    color: grey;
-    font-size: .9em;
-}
-form p a.active{
-    color: #ef7f1a;
-    line-height: 60px;
-}
 /* Form input */
 form input{
     width: 100%;
@@ -79,21 +71,20 @@ form input{
     border-top: 2px solid #25282a;
     color: white;
     padding-left: 10px;
+    font-size: 1.1em;
 }
 form input::placeholder{
     color:#3a3e41;
     font-size: 1.2em;
-    font-family: cursive;
-}
-form input.last{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 form input:nth-child(2){
     background-color: rgba(27, 29, 30, 0.9);
 }
 form input:nth-child(3){
     background-color: rgba(27, 29, 30, 0.82);
+    padding-right: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 form button[type='submit']:hover{
     cursor: pointer;
@@ -115,13 +106,7 @@ form button[type='submit']{
     transition: .5s;
 }
 form button[type='submit']:hover{
-    width: 100px;
-    height: 75px;
     border-radius: 20px;
-}
-form button[type='submit']:hover::after{
-    background: center / contain no-repeat url("../../media/door-open.png");
-    top: 10px;
 }
 form button[type='submit']::after{
     content: '';
@@ -129,23 +114,37 @@ form button[type='submit']::after{
     position: absolute;
     width: 60px;
     height: 60px;
-    background-color: #acacac;
     top: 20px;
     right: 20px;
     background: center / contain no-repeat url("../../media/door-closed.png");
     transition: .5s;
 }
-.buttons{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 450px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    
+form button.open::after{
+    background: center / contain no-repeat url("../../media/door-open.png");
 }
-.buttons a{
-    color: #acacac;
-    letter-spacing: .8px;
+#eye{
+    display: none;
+}
+
+#eye:checked ~ label{
+    background: center / contain no-repeat url('../../media/eye_open.svg');
+}
+main form label{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: center / contain no-repeat url('../../media/eye_close.svg');
+    right: 10px;
+}
+.validation{
+    position: absolute;
+    right: 20px;
+    top: 250px;
+}
+.wrong{
+    color: red;
+}
+.correct{
+    color: green;
 }

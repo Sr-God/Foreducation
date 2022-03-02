@@ -47,3 +47,27 @@ body{
     --navImageBg: center / cover no-repeat url(../media/bg-nav-light.png);
     --themeSwitch: rgba(244,119,34,0.5);
 }
+#themeSwitch{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    color: var(--white);
+    transition: .3s;
+}
+#themeSwitch:hover{
+    background: var(--themeSwitch);
+}
+#themeSwitch::before{
+    content: '\f185';
+    font-family: fontAwesome;
+    font-size: 30px;
+}
+#themeSwitch.active::before{
+    content: '\f186';
+}

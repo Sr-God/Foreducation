@@ -4,21 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/css/font-awesome.css">
     <link rel="stylesheet" href="styles/pages/pageLogin.css">
     <link rel="stylesheet" href="styles/main.css">
     <title>Авторизация</title>
 </head>
 <body>
-    <main>
+    <button title="Поменять тему" id="themeSwitch"></button>
+    <main>    
         <div class="logo">
             <a href="https://www.kolledge39.ru/"><img src="media/logo.png"></a>
         </div>
         <form action="" method='POST'>
             <p class="auth">Авторизация</p>
-            <input type="text" name="login" placeholder="Логин">
-            <input type="password" name="password" class="last" placeholder="Пароль">
-            <button title="Войти" type="submit"></button>
-        </form>    
+            <input type="text" name="login" id="login" pattern="[A-Z]+$" placeholder="Логин" required>
+            <input type="password" name="password"id="password" maxlength="11" minlength="11" pattern="[0-9]{11,}" placeholder="Пароль" required>
+            <input type="checkbox" id="eye">
+            <label for="eye"></label>
+            <button title="Войти" type="submit" class="doors"></button>
+            
+        </form>
+        <div class="validation">
+            <p class="wrongLogin"><span class="viewLogin"></span> Только английские заглавные буквы</p>
+            <p class="wrongLenght"><span class="viewLenght"></span> Длина пароля 11 символов</p>
+            <p class="wrongPassword"><span class="viewPassword"></span> Только цифры</p>
+        </div>
     </main>
+    <script src="js/main.js"></script>
+    <script>
+    let loginIn = document.querySelector('#login');
+    let passIn = document.querySelector('#password');
+
+    let wrongLogin = document.querySelector('.wrongLogin');
+    let wrongLength = document.querySelector('.wrongLenght');
+    let wrongPassword = document.querySelector('.wrongPassword');
+
+    let viewLogin = document.querySelector('.viewLogin');
+    let viewLength = document.querySelector('.viewLenght');
+    let viewPassword = document.querySelector('.viewPassword');
+
+    let doors = document.querySelector(".doors");
+    
+
+    let eyeBtn = document.querySelector('#eye');
+    // CHECK USER VALID
+    loginIn.addEventListener('input', function (){
+        viewLogin.innerHTML = loginIn.validity.valid ? '+' : '-';
+        wrongLogin.className = loginIn.validity.valid ? 'correct' : 'wrong';
+        checkDoors();
+    })
+    // CHECK PASSWORD VALID
+    passIn.addEventListener('input', function (){
+        viewLength.innerHTML = passIn.validity.valid ? '+' : '-';
+        wrongLength.className = passIn.validity.valid ? 'correct' : 'wrong';
+
+        viewPassword.innerHTML = Number(passIn.value) ? '+' : '-';
+        wrongPassword.className = Number(passIn.value) ? 'correct' : 'wrong';
+        checkDoors();
+    })
+
+    function checkDoors(){
+        if(viewLogin.innerHTML == '+' && viewLength.innerHTML == '+' && viewPassword.innerHTML == '+')
+            return doors.classList.add('open');
+        else
+            return doors.classList.remove('open');
+    }
+
+    // EYE
+    eyeBtn.addEventListener('click', function (){
+        passIn.type = eyeBtn.checked ? 'text' : 'password';
+    })
+    </script>
 </body>
 </html>

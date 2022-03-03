@@ -39,4 +39,5 @@
 .btn-search:focus ~ .input-search,
 .input-search:focus{
   width: 300px;
+  border-radius: 10px;
 }

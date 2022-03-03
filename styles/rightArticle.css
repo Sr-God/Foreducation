@@ -3,7 +3,7 @@ article{
     padding-left: 130px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 /* -- Table */
@@ -20,7 +20,7 @@ article{
     width: 100%;
 }
 #table-scroll {
-    height: 700px;
+    height: 750px;
     overflow:auto;
     border-radius: 20px;
 }

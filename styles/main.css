@@ -34,8 +34,8 @@ body{
 .dark{
     --white: #000;
     --black: rgb(212, 212, 212);
-    --redOrange: #549E7C;
-    --lightOrange: rgb(64, 229, 199);
+    --redOrange: #5eb3a1;
+    --lightOrange: rgb(55, 196, 170);
     --gradientO: linear-gradient(to bottom,#37c5ad 50%, #179C85);
     --bodyBackground: linear-gradient(to bottom, #ECD8CA 50%, #FBB484);
     --tableBackground: #F0EBE8;

@@ -101,5 +101,12 @@ aside .user .info p{
 .settings .exit{
     position: absolute;
     bottom: -50px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
     right: 0;
+    transition: .1s;
+}
+.settings .exit:hover{
+    color: var(--lightOrange);
 }

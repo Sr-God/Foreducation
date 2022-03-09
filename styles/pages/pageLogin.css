@@ -10,7 +10,7 @@ body{
 main{
     display: flex;
     position: relative;
-    background: var(--loginImageBg);
+    background-color: var(--white);
     background-size: 1100px 505px;
     flex-flow: column wrap;
     align-items: center;
@@ -18,7 +18,7 @@ main{
     width: 1080px;
     min-height: 490px;
     border: 1px solid #6b6a69;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 /* Logo */
 .logo{
@@ -46,7 +46,6 @@ form{
     background: linear-gradient(#181a1b 50%, transparent);
     min-height: 190px;
     justify-content: flex-end;
-    
     border: 1px solid #2d3133;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -125,7 +124,6 @@ form button.open::after{
 #eye{
     display: none;
 }
-
 #eye:checked ~ label{
     background: center / contain no-repeat url('../../media/eye_open.svg');
 }

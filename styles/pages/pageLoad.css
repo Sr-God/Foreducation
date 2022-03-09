@@ -5,6 +5,3 @@ body{
     display: flex;
     flex-flow: row nowrap;
 }
-article{
-    width: 85%;
-}

@@ -1,9 +1,9 @@
 /* Дописать таблицу / форму редактирования */
 /* Адаптивная таблица через data */
 /* валидация */
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
-@import url(leftAside.css);
-@import url(rightArticle.css);
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
+@import url(asideLeft.css);
+@import url(aricleRight.css);
 @import url(filters/filters.css);
 @import url(../fonts/css/font-awesome.css);
 *{
@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Shippori Antique', sans-serif;
+    font-family: 'Mulish', sans-serif;
     background: var(--mainBlack);
     position: relative;
 }
@@ -37,6 +37,7 @@ body{
     --secondBlack: #F3F3F3;
     --themeSwitch: rgba(180,180,180, 0.5);
 }
+/* THEMESWITCH */
 #themeSwitch{
     position: absolute;
     top: 20px;

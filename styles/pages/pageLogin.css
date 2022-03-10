@@ -5,6 +5,7 @@ body{
     place-items: center;
     overflow: hidden;
     position: relative;
+    font-family: 'Mulish', sans-serif;
 }
 /* Main */
 main{

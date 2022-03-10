@@ -10,8 +10,11 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- LEFT ASIDE -->
     <aside class="left">
+        <!-- LOGO -->
         <a href="https://www.kolledge39.ru/" class="logo"></a>
+        <!-- NAV -->
         <nav>
             <a href="load.html"><i class="fa fa-bar-chart-o"></i> Нагрузка</a>
             <a href="report.html"><i class="fa fa-pencil-square-o"></i> Отчётность</a>
@@ -23,6 +26,7 @@
             <a href="debt.html"><i class="fa fa-exclamation-circle"></i> Задолжности</a>
             <a href="http://78.155.191.46:8081/region_pou_secured/region.cgi"><i class="fa fa-book"></i> Журнал</a>
         </nav>
+        <!-- USER -->
         <div class="user">
             <div class="avatar"></div>
             <div class="info">
@@ -34,16 +38,17 @@
             </div>
         </div>
     </aside>
+    <!-- RIGHT ARTICLE -->
     <article class="right">
+        <!-- THEMESWITCH -->
         <button title="Поменять тему" id="themeSwitch"></button>
+        <!-- FILTERS -->
         <section class="filters">
             <div class="search-box">
                 <button class="btn-search"><i class="fa fa-search"></i></button>
                 <input type="text" class="input-search" placeholder="Поиск">
             </div>
             <div class="filters-table">
-                <!-- <button class="print">Печать</button>
-                <button class="excel">Excel</button> -->
                 <!-- --------- FILTER --------- -->
                 <input class="inFilters" id="fields" type="checkbox">
                 <label class="button-fields filters-button" for="fields">Поля <i class="fa fa-angle-down"></i></label>
@@ -63,10 +68,10 @@
                 <label class="button-sort filters-button" for="sort">Сортировать <i class="fa fa-angle-down"></i></label>
                 <!-- --------- SUB-FILTER --------- -->
                 <div class="sub_filter sub_sort">
-                
                 </div>
             </div>
         </section>
+        <!-- TABLE -->
         <section id="table-wrapper">
             <section id="table-scroll">
             <table>
@@ -150,33 +155,11 @@
                         <td data-label="Номер зачётки">4462/20</td>
                         <td data-label="Исключен">Нет</td>
                     </tr>
-                    
                 </tbody>
                 </table>
             </section>
         </section>
     </article>
-    <!-- <section class="add-student">
-        <form action="POST">
-            <div class="underline">
-                <input type="text" placeholder="Ф.И.О">
-            </div>
-            <select name="formEduc" id="formEduc">
-                <option disabled selected>Форма обучения</option>
-                <option value="Бюджет">Бюджет</option>
-                <option value="Коммерция">Коммерция</option>
-            </select>
-            <div class="underline">
-            <input type="text" placeholder="Номер зачётки">
-            </div>
-            <input id="expel" type="checkbox"> <label for="expel">Отчислен</label>
-
-            <div class="buttons">
-                <input type="submit" value="Создать">
-                <input type="submit" value="Изменить">
-            </div>
-        </form>
-    </section> -->
     <script src="js/main.js"></script>
     <script src="js/filter.js"></script>
 </body>

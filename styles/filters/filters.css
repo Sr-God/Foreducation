@@ -1,6 +1,7 @@
 @import url(filterSearch.css);
-@import url(filtersTable.css);
+@import url(filterTable.css);
 
+/* FILTERS */
 article .filters{
     width: 100%;
     display: flex;
@@ -8,13 +9,9 @@ article .filters{
     background: var(--mainGray);
     padding: 30px 100px 30px 30px;
 }
+/* FILTERS LABEL */
 article .filters input[type="checkbox"]{
     display: none;
-}
-article .filters label:nth-child(2){
-    background: none;
-    color: var(--white);
-    border: 1px solid var(--mainOrange);
 }
 article .filters label{
     background: var(--mainOrange);

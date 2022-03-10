@@ -1,11 +1,13 @@
+/* FILTERS TABLE */
 .filters-table{
     display: flex;
     justify-content: space-evenly;
     width: 600px;
     position: relative;
 }
+/* FILTERS BUTTON */
 .filters-table .filters-button{
-    width: 29.9%;
+    width: 30%;
     padding: 0 20px;
     border-radius: 5px;
     text-align: center;
@@ -14,12 +16,14 @@
     align-items: center;
     transition: .1s;
 }
+/* FILTERS LABEL CHECKED */
 .filters-table #fields:checked + label,
 .filters-table #hours:checked + label,
 .filters-table #sort:checked + label{
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
+/* FILTERS SUB_MENU */
 .sub_filter{
     width: 29.9%;
     visibility: hidden;
@@ -50,14 +54,6 @@
     top: 7px;
     left: 0;
 }
-.filters-button:click .sub_filter{
-        transform: translateY(-150%);
-        animation: ani 1s forwards;
-}
-@keyframes ani {
-    0% {transform: translateY(-150%);}
-    100% {transform: translateY(0);}
-  }
 .sub_fields{
     right: 405px;
 }
@@ -72,7 +68,7 @@
     transform: translateY(-150%);
     animation: sub_menu .5s forwards;
 }
-
+/* ANIMATION SUB_MENU */
 @keyframes sub_menu {
     0% {
         transform: translateY(-10%);

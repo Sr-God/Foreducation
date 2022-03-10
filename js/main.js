@@ -1,11 +1,9 @@
 'use strict';
-    /* Theme Switch */
-    let body = document.querySelector('body');
-    let themeSwitch = document.querySelector('#themeSwitch');    
-    themeSwitch.addEventListener('click', function(){
-            body.classList.toggle("dark");
-            themeSwitch.classList.toggle('active');
-    });
-
-
+/* Theme Switch */
+let body = document.querySelector('body');
+let themeSwitch = document.querySelector('#themeSwitch');    
+themeSwitch.addEventListener('click', function(){
+        body.classList.toggle("dark");
+        themeSwitch.classList.toggle('active');
+});
 

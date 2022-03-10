@@ -1,3 +1,4 @@
+/* CLOSE SUB_MENU */
 let inputs = document.querySelectorAll('.inFilters');
 for(let input of inputs){
     input.addEventListener('click', checktrue);
@@ -16,4 +17,3 @@ for(let input of inputs){
         }, 1);
     }
 }
-    

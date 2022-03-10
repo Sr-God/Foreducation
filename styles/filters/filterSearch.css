@@ -1,6 +1,8 @@
+/* FILTER SEARCH */
 .search-box{
     position: relative;
 }
+/* INPUT SEARCH */
 .input-search{
   height: 50px;
   width: 50px;
@@ -13,7 +15,7 @@
   transition: all .5s ease-in-out;
   background: #fff;
   padding-right: 40px;
-  color: var(--white);
+  color: #000;
 }
 .input-search::placeholder{
   color: #000;
@@ -21,6 +23,7 @@
   letter-spacing: 2px;
   font-weight: 100;
 }
+/* BUTTON SEARCH */
 .btn-search{
   width: 50px;
   height: 50px;

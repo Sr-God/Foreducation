@@ -95,7 +95,7 @@ form button[type='submit']{
     z-index: 1;
     position: absolute;
     font-size: 1em;
-    background: var(--mainOrange);
+    background: var(--secondOrange);
     width: 350px;
     height: 50px;
     text-align: center;

@@ -31,6 +31,9 @@ table thead{
     color:var(--white);
     height: 40px;
     background: var(--mainOrange);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 table thead th{
     padding: 10px;

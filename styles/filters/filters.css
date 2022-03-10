@@ -2,16 +2,22 @@
 @import url(filtersTable.css);
 
 article .filters{
-    padding: 0 0 0 40px;
+    width: 100%;
     display: flex;
-    width: 90%;
     justify-content: space-between;
+    background: var(--mainGray);
+    padding: 30px 100px 30px 30px;
 }
 article .filters input[type="checkbox"]{
     display: none;
 }
+article .filters label:nth-child(2){
+    background: none;
+    color: var(--white);
+    border: 1px solid var(--mainOrange);
+}
 article .filters label{
-    background: var(--gradientO);
-    color: whitesmoke;
+    background: var(--mainOrange);
+    color: var(--white);
     cursor: pointer;
 }

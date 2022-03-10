@@ -5,6 +5,7 @@
 @import url(leftAside.css);
 @import url(rightArticle.css);
 @import url(filters/filters.css);
+@import url(../fonts/css/font-awesome.css);
 *{
     padding: 0;
     margin: 0;
@@ -12,40 +13,28 @@
 }
 body{
     font-family: 'Shippori Antique', sans-serif;
-    background: var(--bodyBackground);
+    background: var(--mainBlack);
     position: relative;
 }
 :root{
-    --white: rgb(212, 212, 212);
-    --black: #000;
-    --redOrange: rgb(233,52,5);
-    --lightOrange: rgb(246,134,33);
-    --gradientO: #ec7e34;
-    --bodyBackground: #262322;
-    --tableBackground: rgb(27,25,24);
-    --tableBorder: rgb(233,52,5);
-    --tableThead: rgb(90,52,27);
-    --tableTd: rgba(233,53,5,0.5);
-    --navBackground: rgba(40,39,38, 0.8);
-    --loginImageBg: #e0e0e0;
-    --navImageBg: center / cover no-repeat url(../media/bg-nav-dark.png);
-    --themeSwitch: rgba(87,87,87,0.5);
+    --white: #f3f3f3;
+    --black: #1B1918;
+    --mainOrange:#E85821;
+    --mainGray: #35312F;
+    --mainBlack: #262322;
+    --secondGray: #787776;
+    --secondBlack: #262322;
+    --themeSwitch: rgba(96,96,96, 0.5);
 }
 .dark{
-    --white: #000;
-    --black: rgb(212, 212, 212);
-    --redOrange: #5eb3a1;
-    --lightOrange: rgb(55, 196, 170);
-    --gradientO: linear-gradient(to bottom,#37c5ad 50%, #179C85);
-    --bodyBackground: linear-gradient(to bottom, #ECD8CA 50%, #FBB484);
-    --tableBackground: #F0EBE8;
-    --tableBorder: rgb(27,25,24);
-    --tableThead: rgba(234, 143, 73, 0.8);
-    --tableTd:rgb(27,25,24);
-    --navBackground: rgba(234, 143, 73, 0.52);
-    --loginImageBg: center / contain no-repeat url(../../media/bg-authorization-light.png);
-    --navImageBg: center / cover no-repeat url(../media/bg-nav-light.png);
-    --themeSwitch: rgba(244,119,34,0.5);
+    --white: #1B1918;
+    --black: #f3f3f3;
+    --mainOrange:#EC7E34;
+    --mainGray: #E0E0E0;
+    --mainBlack: #F3F3F3;
+    --secondGray:#C8C8C8;
+    --secondBlack: #F3F3F3;
+    --themeSwitch: rgba(180,180,180, 0.5);
 }
 #themeSwitch{
     position: absolute;

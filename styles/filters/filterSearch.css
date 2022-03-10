@@ -11,12 +11,12 @@
   outline: none;
   border-radius: 25px;
   transition: all .5s ease-in-out;
-  background: var(--gradientO);
+  background: #fff;
   padding-right: 40px;
-  color:#fff;
+  color: var(--white);
 }
 .input-search::placeholder{
-  color: white;
+  color: #000;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
@@ -32,12 +32,12 @@
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:#ffffff;
+  color: #000;
   background-color:transparent;
   pointer-events: painted;  
 }
 .btn-search:focus ~ .input-search,
 .input-search:focus{
   width: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
 }

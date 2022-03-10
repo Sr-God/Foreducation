@@ -10,13 +10,15 @@ body{
 main{
     display: flex;
     position: relative;
-    background: var(--loginImageBg);
+    background-color: var(--white);
+    background-size: 1100px 505px;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
     width: 400px;
     min-height: 700px;
     border: 1px solid #6b6a69;
+    border-radius: 5px;
 }
 /* Logo */
 .logo{
@@ -49,8 +51,12 @@ form{
     display: flex;
     flex-flow: column wrap;
     min-height: 190px;
-    justify-content: space-between;
-
+    justify-content: flex-end;
+    border: 1px solid #2d3133;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     position: relative;
 }
 form p{
@@ -106,7 +112,6 @@ form button[type='submit']{
 #eye{
     display: none;
 }
-
 #eye:checked ~ label{
     background: center / contain no-repeat url('../../media/eye_open.svg');
 }

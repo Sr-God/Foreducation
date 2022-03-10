@@ -35,4 +35,4 @@ function checkDoors(){
 // EYE
 eyeBtn.addEventListener('click', function (){
     passIn.type = eyeBtn.checked ? 'text' : 'password';
-})
+});

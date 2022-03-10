@@ -7,22 +7,12 @@
 .filters-table .filters-button{
     width: 29.9%;
     padding: 0 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: .1s;
-}
-.print,
-.excel{
-    border: none;
-    outline: none;
-    color: #fff;
-    background: var(--gradientO);
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
 }
 .filters-table #fields:checked + label,
 .filters-table #hours:checked + label,
@@ -32,19 +22,17 @@
 }
 .sub_filter{
     width: 29.9%;
-    min-height: 200px;
     visibility: hidden;
     background-color: aliceblue;
     position: absolute;
     padding: 10px;
     z-index: 20;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     display: flex;
     flex-flow: column wrap;
     top: 50px;
     right: 15px;
-    border: 2px solid var(--redOrange);
 }
 .sub_filter a{
     padding: 0 0 10px 25px;
@@ -79,6 +67,19 @@
 .filters-table #fields:checked ~ .sub_fields,
 .filters-table #hours:checked ~ .sub_hours,
 .filters-table #sort:checked ~ .sub_sort{
+    opacity: 1;
     visibility: visible;
+    transform: translateY(-150%);
+    animation: sub_menu .5s forwards;
 }
 
+@keyframes sub_menu {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }

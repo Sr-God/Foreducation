@@ -20,14 +20,14 @@ body{
     --black: #000;
     --redOrange: rgb(233,52,5);
     --lightOrange: rgb(246,134,33);
-    --gradientO: linear-gradient(to bottom, rgb(246,134,33) 5%, rgb(246,134,33) 5%, rgb(233,52,5) 100%);
-    --bodyBackground: linear-gradient(#181a1b 50%, #6e6f6f);
+    --gradientO: #ec7e34;
+    --bodyBackground: #262322;
     --tableBackground: rgb(27,25,24);
     --tableBorder: rgb(233,52,5);
     --tableThead: rgb(90,52,27);
     --tableTd: rgba(233,53,5,0.5);
     --navBackground: rgba(40,39,38, 0.8);
-    --loginImageBg: center / contain no-repeat url(../../media/bg-authorization-dark.png);
+    --loginImageBg: #e0e0e0;
     --navImageBg: center / cover no-repeat url(../media/bg-nav-dark.png);
     --themeSwitch: rgba(87,87,87,0.5);
 }

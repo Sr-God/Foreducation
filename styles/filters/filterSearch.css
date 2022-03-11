@@ -1,9 +1,9 @@
 /* FILTER SEARCH */
-.search-box{
+.search__box{
     position: relative;
 }
 /* INPUT SEARCH */
-.input-search{
+.input__search{
   height: 50px;
   width: 50px;
   border-style: none;
@@ -17,14 +17,14 @@
   padding-right: 40px;
   color: #000;
 }
-.input-search::placeholder{
+.input__search::placeholder{
   color: #000;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
 /* BUTTON SEARCH */
-.btn-search{
+.btn__search{
   width: 50px;
   height: 50px;
   border-style: none;
@@ -39,8 +39,8 @@
   background-color:transparent;
   pointer-events: painted;  
 }
-.btn-search:focus ~ .input-search,
-.input-search:focus{
+.btn__search:focus ~ .input__search,
+.input__search:focus{
   width: 300px;
   border-radius: 5px;
 }

@@ -38,7 +38,7 @@ body{
     --themeSwitch: rgba(180,180,180, 0.5);
 }
 /* THEMESWITCH */
-#themeSwitch{
+#theme__switch{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -51,14 +51,14 @@ body{
     color: var(--white);
     transition: .3s;
 }
-#themeSwitch:hover{
+#theme__switch:hover{
     background: var(--themeSwitch);
 }
-#themeSwitch::before{
+#theme__switch::before{
     content: '\f185';
     font-family: fontAwesome;
     font-size: 30px;
 }
-#themeSwitch.active::before{
+#theme__switch.active::before{
     content: '\f186';
 }

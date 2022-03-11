@@ -1,5 +1,5 @@
 /* CLOSE SUB_MENU */
-let inputs = document.querySelectorAll('.inFilters');
+let inputs = document.querySelectorAll('.input__filters');
 for(let input of inputs){
     input.addEventListener('click', checktrue);
     function checktrue(){

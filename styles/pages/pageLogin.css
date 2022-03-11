@@ -31,7 +31,7 @@ main{
 .logo img{
     width: 100%;
 }
-.user-icon{
+.user__icon{
     width: 180px;
     position: absolute;
     top: -87px;

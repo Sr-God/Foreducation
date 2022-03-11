@@ -1,12 +1,12 @@
 /* FILTERS TABLE */
-.filters-table{
+.filters__table{
     display: flex;
     justify-content: space-evenly;
     width: 600px;
     position: relative;
 }
 /* FILTERS BUTTON */
-.filters-table .filters-button{
+.filters__table .filters__button{
     width: 30%;
     padding: 0 20px;
     border-radius: 5px;
@@ -15,46 +15,66 @@
     justify-content: space-between;
     align-items: center;
     transition: .1s;
+    position: relative;
+    font-weight: bold;
 }
-/* FILTERS LABEL CHECKED */
-.filters-table #fields:checked + label,
-.filters-table #hours:checked + label,
-.filters-table #sort:checked + label{
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+.filters__button::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 70%;
+    background-color: var(--white);
+    top:10px;
+    right: 45px;
 }
 /* FILTERS SUB_MENU */
-.sub_filter{
+.sub__filter{
     width: 30%;
     visibility: hidden;
-    background-color: aliceblue;
+    background-color: #fff;
     position: absolute;
     padding: 10px;
     z-index: 20;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
     display: flex;
     flex-flow: column wrap;
-    top: 50px;
     right: 15px;
+    top: 61px;
 }
-.sub_filter a{
+.sub__filter::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -10px;
+    left: 80px;
+}
+.sub__filter a{
     padding: 0 0 20px 25px;
     text-decoration: none;
     position: relative;
     font-size: 1.12em;
+    color: #000;
 }
-.sub_filter a::after{
+.sub__filter a:hover{
+    color: var(--mainOrange);
+}
+.sub__filter a::after{
     position: absolute;
     content: '';
     display: block;
-    width: 100%;
+    width: 84%;
     height: 2px;
     background: #000;
-    left: 0;
-    bottom: 13px;
+    right: 0;
+    bottom: 10px;
 }
-.sub_filter a::before{
+.sub__filter a::before{
     position: absolute;
     content: '';
     display: block;
@@ -64,18 +84,24 @@
     top: 7px;
     left: 0;
 }
-.sub_filter a.selected::before{
+.sub__filter a:last-child:after{
+    display: none;
+}
+.sub__filter a.selected::before{
     background-color: var(--mainOrange);
 }
-.sub_fields{
+.sub__filter a.selected{
+    color: var(--mainOrange);
+}
+.sub__fields{
     right: 405px;
 }
-.sub_hours{
+.sub__hours{
     right: 210px;
 }
-.filters-table #fields:checked ~ .sub_fields,
-.filters-table #hours:checked ~ .sub_hours,
-.filters-table #sort:checked ~ .sub_sort{
+.filters__table #fields:checked ~ .sub__fields,
+.filters__table #hours:checked ~ .sub__hours,
+.filters__table #sort:checked ~ .sub__sort{
     opacity: 1;
     visibility: visible;
     transform: translateY(-150%);

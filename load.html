@@ -30,8 +30,8 @@
         <div class="user">
             <div class="avatar"></div>
             <div class="info">
-                <span class="nameUser">Имя Фамилия</span>
-                <p>Роль: <span class="role">Администратор</span></p>
+                <span class="name__user">Имя Фамилия</span>
+                <p>Роль: <span class="role">Администратор</span></p>    
             </div>
             <div class="settings">
                 <a href="index.html" class="exit">Выйти</a>
@@ -41,44 +41,40 @@
     <!-- RIGHT ARTICLE -->
     <article class="right">
         <!-- THEMESWITCH -->
-        <button title="Поменять тему" id="themeSwitch"></button>
+        <button title="Поменять тему" id="theme__switch"></button>
         <!-- FILTERS -->
         <section class="filters">
-            <div class="search-box">
-                <button class="btn-search"><i class="fa fa-search"></i></button>
-                <input type="text" class="input-search" placeholder="Поиск">
+            <div class="search__box">
+                <button class="btn__search"><i class="fa fa-search"></i></button>
+                <input type="text" class="input__search" placeholder="Поиск">
             </div>
-                <div class="filters-table">
-                    <!-- --------- FILTER --------- -->
-                    <input class="inFilters" id="fields" type="checkbox">
-                    <label class="button-fields filters-button" for="fields">Поля <i class="fa fa-angle-down"></i></label>
-                    <!-- --------- SUB-FILTER --------- -->
-                    <div class="sub_filter sub_fields">
-                        
-                    </div>
-                    <!-- --------- FILTER --------- -->
-                    <input class="inFilters" id="hours" type="checkbox">
-                    <label class="button-hours filters-button" for="hours">Тип часов <i class="fa fa-angle-down"></i></label>
-                    <!-- --------- SUB-FILTER --------- -->
-                    <div class="sub_filter sub_hours">
-                        
-                    </div>
-                    <!-- --------- FILTER --------- -->
-                    <input class="inFilters" id="sort" type="checkbox">
-                    <label class="button-sort filters-button" for="sort">Сортировать <i class="fa fa-angle-down"></i></label>
-                    <!-- --------- SUB-FILTER --------- -->
-                    <div class="sub_filter sub_sort">
-                        <a class="sub_sort_btn" href="?sortby=teachers">Преподаватель</a>
-                        <a class="sub_sort_btn" href="?sortby=lessons">Дисциплина</a>
-                        <a class="sub_sort_btn" href="?sortby=otd">Отделение</a>
-                        <a class="sub_sort_btn" href="?sortby=group">Группа</a>
-                        <a class="sub_sort_btn" href="?sortby=course">Курс</a>
-                    </div>
+            <div class="filters__table">
+                <!-- --------- FILTER --------- -->
+                <input class="input__filters" id="fields" type="checkbox">
+                <label class="button__fields filters__button" for="fields">Поля <i class="fa fa-angle-down"></i></label>
+                <!-- --------- SUB-FILTER --------- -->
+                <div class="sub__filter sub__fields"></div>
+                <!-- --------- FILTER --------- -->
+                <input class="input__filters" id="hours" type="checkbox">
+                <label class="button__hours filters__button" for="hours">Тип часов <i class="fa fa-angle-down"></i></label>
+                <!-- --------- SUB-FILTER --------- -->
+                <div class="sub__filter sub__hours"></div>
+                <!-- --------- FILTER --------- -->
+                <input class="input__filters" id="sort" type="checkbox">
+                <label class="button__sort filters__button" for="sort">Сортировать <i class="fa fa-angle-down"></i></label>
+                <!-- --------- SUB-FILTER --------- -->
+                <div class="sub__filter sub__sort">
+                    <a class="sub_sort_btn selected" href="?sortby=teachers">Преподаватель</a>
+                    <a class="sub_sort_btn" href="?sortby=lessons">Дисциплина</a>
+                    <a class="sub_sort_btn" href="?sortby=otd">Отделение</a>
+                    <a class="sub_sort_btn" href="?sortby=group">Группа</a>
+                    <a class="sub_sort_btn" href="?sortby=course">Курс</a>
                 </div>
+            </div>
         </section>
         <!-- TABLE -->
-        <section id="table-wrapper">
-            <section id="table-scroll">
+        <section id="table__wrapper">
+            <section id="table__scroll">
             <table>
                 <thead>
                     <tr>

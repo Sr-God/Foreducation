@@ -12,12 +12,20 @@
 <body>
     <main>
         <img src="media/user-circle.png" alt="" class="user__icon">
-        <form action="" method='POST'>
+        <form action="" method='POST' class="login">
             <input type="text" name="login" id="login" pattern="[A-Z]+$" placeholder="Логин" required>
-            <input type="password" name="password"id="password" maxlength="11" minlength="11" pattern="[0-9]{11,}" placeholder="Пароль" required>
-            <button type="submit" title="Войти">Войти</button>
+            <div class="invalid__login">
+                <p class="wrong__login"><span class="view__login">✘</span> Только английские заглавные буквы</p>
+            </div>
+            <input type="password" name="password" id="password" maxlength="11" minlength="11" pattern="[0-9]{11,}" placeholder="Пароль" required>
+            <input id="eye" type="checkbox">
+            <label for="eye"></label>
+            <div class="invalid__pass">
+                <p class="wrong__length"><span class="view__length">✘</span> Длина 11 символов</p>
+                <p class="wrong__password"><span class="view__password">✘</span> Только цифры</p>
+            </div>
+            <input type="submit" title="Войти" value="Войти">
         </form>
-
     </main>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>

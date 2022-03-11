@@ -1,38 +1,43 @@
+// CHECK LOGIN VALID
+let invalidLogin = document.querySelector('.invalid__login');
+// LOGIN INPUT
 let loginIn = document.querySelector('#login');
-let passIn = document.querySelector('#password');
+// LOGIN  P
+let wrongLogin = document.querySelector('.wrong__login');
+// LOGIN SPAN
+let viewLogin = document.querySelector('.view__login');
 
-let wrongLogin = document.querySelector('.wrongLogin');
-let wrongLength = document.querySelector('.wrongLenght');
-let wrongPassword = document.querySelector('.wrongPassword');
-
-let viewLogin = document.querySelector('.viewLogin');
-let viewLength = document.querySelector('.viewLenght');
-let viewPassword = document.querySelector('.viewPassword');
-
-let doors = document.querySelector(".doors");
-
-let eyeBtn = document.querySelector('#eye');
-// CHECK USER VALID
-loginIn.addEventListener('input', function (){
-    viewLogin.innerHTML = loginIn.validity.valid ? '+' : '-';
+loginIn.addEventListener('input', function () {
+    invalidLogin.className = loginIn.validity.valid ? 'invalid__correct' : 'invalid__wrong';
     wrongLogin.className = loginIn.validity.valid ? 'correct' : 'wrong';
-    checkDoors();
+    viewLogin.innerHTML = loginIn.validity.valid ? '✔' : '✘';
 })
+
 // CHECK PASSWORD VALID
-passIn.addEventListener('input', function (){
-    viewLength.innerHTML = passIn.validity.valid ? '+' : '-';
-    wrongLength.className = passIn.validity.valid ? 'correct' : 'wrong';
-    viewPassword.innerHTML = Number(passIn.value) ? '+' : '-';
+let invalidPass = document.querySelector('.invalid__pass');
+// PASSWORD INPUT
+let passIn = document.querySelector('#password');
+// PASSWORD P
+let wrongPassword = document.querySelector('.wrong__password');
+// PASSWORD SPAN
+let viewPassword = document.querySelector('.view__password');
+// LENGTH P
+let wronglength = document.querySelector('.wrong__length');
+// LENGTH SPAN
+let viewlength = document.querySelector('.view__length');
+
+passIn.addEventListener('input', function () {
+    invalidPass.className = passIn.validity.valid ? 'invalid__correct' : 'invalid__wrong';
+    // LENGTH CHECK
+    wronglength.className = (passIn.value).length == 11 ? 'correct' : 'wrong';
+    viewlength.innerHTML = (passIn.value).length == 11 ? '✔' : '✘';
+    // NUMBER CHECK
     wrongPassword.className = Number(passIn.value) ? 'correct' : 'wrong';
-    checkDoors();
+    viewPassword.innerHTML = Number(passIn.value) ? '✔' : '✘';
 })
-function checkDoors(){
-    if(viewLogin.innerHTML == '+' && viewLength.innerHTML == '+' && viewPassword.innerHTML == '+')
-        return doors.classList.add('open');
-    else
-        return doors.classList.remove('open');
-}
+
 // EYE
-eyeBtn.addEventListener('click', function (){
+let eyeBtn = document.querySelector('#eye');
+eyeBtn.addEventListener('click', function () {
     passIn.type = eyeBtn.checked ? 'text' : 'password';
 });

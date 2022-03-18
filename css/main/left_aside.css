@@ -11,7 +11,7 @@ aside .logo{
     display: block;
     width: 90%;
     height: 100px;
-    background: center / contain no-repeat url("../media/logo.png");
+    background: center / contain no-repeat url("../../media/logo.png");
 }
 /* Nav */
 aside nav{
@@ -38,10 +38,11 @@ aside nav a:active > i.fa{
     transform: translateY(-5px);
 }
 aside nav a.active{
-    background-color: var(--mainOrange);
+    background: linear-gradient(to left, var(--secondOrange), var(--mainOrange));
 }
 aside nav a:hover{
-    background-color: var(--mainOrange);
+    background: linear-gradient(to left, var(--secondOrange), var(--mainOrange));
+    animation: gradient .5s forwards;
 }
 aside nav a:last-child{
     border: none;

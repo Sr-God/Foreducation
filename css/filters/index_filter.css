@@ -1,5 +1,7 @@
-@import url(filterSearch.css);
-@import url(filterTable.css);
+@import url(filter_table.css);
+@import url(filter_search.css);
+@import url(filter_export_print.css);
+@import url(modal.css);
 
 /* FILTERS */
 article .filters{
@@ -17,4 +19,7 @@ article .filters label{
     background: var(--mainOrange);
     color: var(--white);
     cursor: pointer;
+}
+.hidden{
+    display: none;
 }

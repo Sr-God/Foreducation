@@ -1,17 +1,28 @@
-/* Дописать таблицу / форму редактирования */
-/* Адаптивная таблица через data */
-/* валидация */
+/*
+    Hover Nav
+    Load file
+    Table Height
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
-@import url(asideLeft.css);
-@import url(aricleRight.css);
-@import url(filters/filters.css);
 @import url(../fonts/css/font-awesome.css);
+@import url(main/left_aside.css);
+@import url(main/right_article.css);
+@import url(pages/page_index.css);
+@import url(filters/index_filter.css);
+@import url(media/index_media.css);
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
     font-family: 'Mulish', sans-serif;
     background: var(--mainBlack);
     position: relative;
@@ -37,6 +48,7 @@ body{
     --secondBlack: #F3F3F3;
     --themeSwitch: rgba(180,180,180, 0.5);
 }
+
 /* THEMESWITCH */
 #theme__switch{
     position: absolute;

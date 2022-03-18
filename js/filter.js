@@ -17,3 +17,20 @@ for(let input of inputs){
         }, 1);
     }
 }
+
+
+let modalBtn = document.querySelector('#export');
+let modalWindow = document.querySelector('#modal__export');
+modalBtn.addEventListener('click', function(){
+    modalWindow.classList.remove('hidden');
+    setTimeout(() =>{
+        window.addEventListener('click', closeModal)
+    }, 1);
+    
+    function closeModal(e){
+        if(e.target == modalWindow){
+            modalWindow.classList.add('hidden');
+            window.removeEventListener('click', closeModal)
+        }
+    }
+});

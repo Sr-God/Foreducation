@@ -1,0 +1,15 @@
+@media print {
+    aside,
+    section.filters,
+    #theme__switch{
+        display: none;
+    }
+    table,
+    tr,
+    td,
+    th{
+        color: black;
+        border: 1px solid black;
+        background: none;
+    }
+}

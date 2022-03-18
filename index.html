@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/fonts/css/font-awesome.css">
-    <link rel="stylesheet" href="styles/pages/pageLogin.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Авторизация</title>
 </head>
 <body>
-    <main>
-        <img src="media/user-circle.png" alt="" class="user__icon">
-        <form action="" method='POST' class="login">
-            <input type="text" name="login" id="login" pattern="[A-Z]+$" placeholder="Логин" required>
-            <div class="invalid__login">
-                <p class="wrong__login"><span class="view__login">✘</span> Только английские заглавные буквы</p>
-            </div>
-            <input type="password" name="password" id="password" maxlength="11" minlength="11" pattern="[0-9]{11,}" placeholder="Пароль" required>
-            <input id="eye" type="checkbox">
-            <label for="eye" title="Скрыть / Показать пароль"></label>
-            <div class="invalid__pass">
-                <p class="wrong__length"><span class="view__length">✘</span> Длина 11 символов</p>
-                <p class="wrong__password"><span class="view__password">✘</span> Только цифры</p>
-            </div>
-            <input type="submit" value="Войти">
-        </form>
-    </main>
+    <section class="login__body">
+        <!-- THEMESWITCH -->
+        <button title="Поменять тему" id="theme__switch"></button>
+        <main>
+            <img src="media/user-circle.png" alt="" class="user__icon">
+            <form action="" method='POST' class="login">
+                <input type="text" name="login" id="login" pattern="[A-Z]+$" placeholder="Логин" required>
+                <div class="invalid__login">
+                    <p class="wrong__login"><span class="view__login">✘</span> Только английские заглавные буквы</p>
+                </div>
+                <input type="password" name="password" id="password" maxlength="11" minlength="11" pattern="[0-9]{11,}" placeholder="Пароль" required>
+                <input id="eye" type="checkbox">
+                <label for="eye" title="Скрыть / Показать пароль"></label>
+                <div class="invalid__pass">
+                    <p class="wrong__length"><span class="view__length">✘</span> Длина 11 символов</p>
+                    <p class="wrong__password"><span class="view__password">✘</span> Только цифры</p>
+                </div>
+                <button type="submit" class="login__btn"><span>Войти</span></button>
+            </form>
+        </main>
+    </section>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>
 </body>

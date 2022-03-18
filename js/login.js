@@ -41,3 +41,4 @@ let eyeBtn = document.querySelector('#eye');
 eyeBtn.addEventListener('click', function () {
     passIn.type = eyeBtn.checked ? 'text' : 'password';
 });
+

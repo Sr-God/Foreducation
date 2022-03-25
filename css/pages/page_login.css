@@ -57,6 +57,7 @@ form.login button[type='submit']{
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 form.login button[type='submit'] span{
     position: relative;
@@ -147,12 +148,50 @@ form.login button[type='submit']:hover::before{
 #eye:checked ~ label{
     background: center / contain no-repeat url('../../media/eye_open.svg');
 }
-main form.login label{
+main form.login label[for='eye']{
     position: absolute;
     cursor: pointer;
     width: 30px;
     height: 30px;
     background: center / contain no-repeat url('../../media/eye_close.svg');
-    top: 440px;
+    top: 400px;
     right: 50px;
+}
+/* SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--secondOrange);
+}
+input:checked + .slider:before {
+    transform: translateX(28px);
 }

@@ -9,8 +9,6 @@
 </head>
 <body>
     <section class="login__body">
-        <!-- THEMESWITCH -->
-        <button title="Поменять тему" id="theme__switch"></button>
         <main>
             <img src="media/user-circle.png" alt="" class="user__icon">
             <form action="" method='POST' class="login">
@@ -26,6 +24,11 @@
                     <p class="wrong__password"><span class="view__password">✘</span> Только цифры</p>
                 </div>
                 <button type="submit" class="login__btn"><span>Войти</span></button>
+                <label class="switch">
+                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked"/>
+                    <span class="slider"></span>
+                </label>
+                <p>Запомнить меня</p>
             </form>
         </main>
     </section>

@@ -1,3 +1,12 @@
+const loginBtn = document.querySelector('.login__btn');
+const main = document.querySelector('main');
+loginBtn.onmousemove = function(e){
+const x = e.pageX - loginBtn.offsetLeft - main.offsetLeft;
+const y = e.pageY - loginBtn.offsetTop - main.offsetTop;
+loginBtn.style.setProperty('--x', x + 'px');
+loginBtn.style.setProperty('--y', y + 'px');
+}
+
 // CHECK LOGIN VALID
 let invalidLogin = document.querySelector('.invalid__login');
 // LOGIN INPUT
@@ -41,4 +50,3 @@ let eyeBtn = document.querySelector('#eye');
 eyeBtn.addEventListener('click', function () {
     passIn.type = eyeBtn.checked ? 'text' : 'password';
 });
-

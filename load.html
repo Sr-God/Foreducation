@@ -1,369 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Нагрузка</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="modal__export" class="hidden">
-        <form action="" method="post">
-                <label for="">
-                    <input type="file" name="file">
-                </label>
-            <span>
-            <select name="" id="">
-                <option disabled selected value="json">Выбрать тип файла</option>
-                <option value="json">json</option>
-                <option value="excel">excel</option>
-                <option value="xml">xml</option>
-            </select>
-            <input type="submit" value="Загрузить">
-            </span>
-        </form>
+      <form action="" method="post">
+        <label for="">
+          <input type="file" name="file" />
+        </label>
+        <span>
+          <select name="" id="">
+            <option disabled selected value="json">Выбрать тип файла</option>
+            <option value="json">json</option>
+            <option value="excel">excel</option>
+            <option value="xml">xml</option>
+          </select>
+          <input type="submit" value="Загрузить" />
+        </span>
+      </form>
     </div>
     <!-- LEFT ASIDE -->
     <aside class="left">
-        <!-- LOGO -->
-        <a href="https://www.kolledge39.ru/" class="logo"></a>
-        <!-- NAV -->
-        <nav>
-            <a href="load.html" class="active"><span> <i class="fa fa-bar-chart-o"></i>         Нагрузка </span></a>
-            <a href="report.html"><span>               <i class="fa fa-pencil-square-o"></i>    Отчётность</span></a>
-            <a href="exams.html"><span>                <i class="fa fa-calendar-check-o"></i>   Экзамены  </span></a>
-            <a href="report.html"><span>               <i class="fa fa-calendar"></i>           Зачёты    </span></a>
-            <a href="dkr.thml"><span>                  <i class="fa fa-folder-open"></i>        Дкр       </span></a>
-            <a href="list.html"><span>                 <i class="fa fa-address-book-o"></i>     Список студентов</span></a>
-            <a href="progress.html"><span>             <i class="fa fa-th-list"></i>            Успеваемость </span></a>
-            <a href="debt.html"><span>                 <i class="fa fa-exclamation-circle"></i> Задолжности  </span></a>
-            <a href="http://78.155.191.46:8081/region_pou_secured/region.cgi"><span><i class="fa fa-book"></i> Журнал</span></a>
-        </nav>
-        <!-- USER -->
-        <div class="user">
-            <div class="avatar"></div>
-            <div class="info">
-                <span class="name__user">Имя Фамилия</span>
-                <p>Роль: <span class="role">Администратор</span></p>    
-            </div>
-            <div class="settings">
-                <a href="index.html" class="exit">Выйти</a>
-            </div>
+      <!-- LOGO -->
+      <a href="https://www.kolledge39.ru/" class="logo"></a>
+      <!-- NAV -->
+      <nav>
+        <a href="load.html" class="nav__btn"><span><i class="fa fa-bar-chart-o"></i> Нагрузка</span></a>
+        <a href="report.html" class="nav__btn"><span><i class="fa fa-pencil-square-o"></i> Отчётность</span></a>
+        <a href="exams.html" class="nav__btn"><span><i class="fa fa-calendar-check-o"></i> Экзамены</span></a>
+        <a href="report.html" class="nav__btn"><span><i class="fa fa-calendar"></i> Зачёты</span></a>
+        <a href="dkr.thml" class="nav__btn"><span><i class="fa fa-folder-open"></i> Дкр</span></a>
+        <a href="list.html" class="active nav__btn"><span><i class="fa fa-address-book-o"></i> Список студентов</span></a>
+        <a href="progress.html" class="nav__btn"><span><i class="fa fa-th-list"></i> Успеваемость</span></a>
+        <a href="debt.html" class="nav__btn"><span><i class="fa fa-exclamation-circle"></i> Задолжности</span></a>
+        <a href="http://78.155.191.46:8081/region_pou_secured/region.cgi" class="nav__btn"><span><i class="fa fa-book"></i> Журнал</span></a>
+      </nav>
+      <!-- USER -->
+      <div class="user">
+        <div class="avatar"></div>
+        <div class="info">
+          <span class="name__user">Имя Фамилия</span>
+          <p>Роль: <span class="role">Администратор</span></p>
         </div>
+        <div class="settings">
+          <a href="index.html" class="exit">Выйти</a>
+        </div>
+      </div>
     </aside>
     <!-- RIGHT ARTICLE -->
     <article class="right">
-        <!-- THEMESWITCH -->
-        <button title="Поменять тему" id="theme__switch"></button>
-        <!-- FILTERS -->
-        <section class="filters">
-            <div class="search__box">
-                <button class="btn__search"><i class="fa fa-search"></i></button>
-                <input type="text" class="input__search" placeholder="Поиск">
-            </div>
-            
-            <div class="filters__table">
-                <div class="export__print">
-                    <button id="export"><i class="fa fa-arrow-circle-o-down"></i></button>
-                    <a id="print" href="javascript:(print());"><i class="fa fa-print"></i></a>
-                </div>
-                <!-- --------- FILTER --------- -->
-                <input class="input__filters" id="fields" type="checkbox">
-                <label class="button__fields filters__button" for="fields">Поля <i class="fa fa-angle-down"></i></label>
-                <!-- --------- SUB-FILTER --------- -->
-                <div class="sub__filter sub__fields"></div>
-                <!-- --------- FILTER --------- -->
-                <input class="input__filters" id="hours" type="checkbox">
-                <label class="button__hours filters__button" for="hours">Тип часов <i class="fa fa-angle-down"></i></label>
-                <!-- --------- SUB-FILTER --------- -->
-                <div class="sub__filter sub__hours"></div>
-                <!-- --------- FILTER --------- -->
-                <input class="input__filters" id="sort" type="checkbox">
-                <label class="button__sort filters__button" for="sort">Сортировать <i class="fa fa-angle-down"></i></label>
-                <!-- --------- SUB-FILTER --------- -->
-                <div class="sub__filter sub__sort">
-                    <a class="sub_sort_btn selected" href="?sortby=teachers">Преподаватель</a>
-                    <a class="sub_sort_btn" href="?sortby=lessons">Дисциплина</a>
-                    <a class="sub_sort_btn" href="?sortby=otd">Отделение</a>
-                    <a class="sub_sort_btn" href="?sortby=group">Группа</a>
-                    <a class="sub_sort_btn" href="?sortby=course">Курс</a>
-                </div>
-            </div>
+      <!-- THEMESWITCH -->
+      <button title="Поменять тему" id="theme__switch"></button>
+      <!-- FILTERS -->
+      <section class="filters">
+        <div class="search__box">
+          <button class="btn__search"><i class="fa fa-search"></i></button>
+          <input type="text" class="input__search" placeholder="Поиск" />
+        </div>
+
+        <div class="filters__table">
+          <div class="export__print">
+            <button id="export">
+              <i class="fa fa-arrow-circle-o-down"></i>
+            </button>
+            <a id="print" href="javascript:(print());"
+              ><i class="fa fa-print"></i
+            ></a>
+          </div>
+          <!-- --------- FILTER --------- -->
+          <input class="input__filters" id="fields" type="checkbox" />
+          <label class="button__fields filters__button" for="fields"
+            >Поля <i class="fa fa-angle-down"></i
+          ></label>
+          <!-- --------- SUB-FILTER --------- -->
+          <div class="sub__filter sub__fields"></div>
+          <!-- --------- FILTER --------- -->
+          <input class="input__filters" id="hours" type="checkbox" />
+          <label class="button__hours filters__button" for="hours"
+            >Тип часов <i class="fa fa-angle-down"></i
+          ></label>
+          <!-- --------- SUB-FILTER --------- -->
+          <div class="sub__filter sub__hours"></div>
+          <!-- --------- FILTER --------- -->
+          <input class="input__filters" id="sort" type="checkbox" />
+          <label class="button__sort filters__button" for="sort"
+            >Сортировать <i class="fa fa-angle-down"></i
+          ></label>
+          <!-- --------- SUB-FILTER --------- -->
+          <div class="sub__filter sub__sort">
+            <a class="sub_sort_btn selected" href="?sortby=teachers"
+              >Преподаватель</a
+            >
+            <a class="sub_sort_btn" href="?sortby=lessons">Дисциплина</a>
+            <a class="sub_sort_btn" href="?sortby=otd">Отделение</a>
+            <a class="sub_sort_btn" href="?sortby=group">Группа</a>
+            <a class="sub_sort_btn" href="?sortby=course">Курс</a>
+          </div>
+        </div>
+      </section>
+      <!-- TABLE -->
+      <section id="table__wrapper">
+        <section id="table__scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Специальность</th>
+                <th>Дисциплина</th>
+                <th>Группы</th>
+                <th>Преподаватель</th>
+                <th>Курс</th>
+                <th>Дкр 1-ый семестр</th>
+                <th>Итог 2-ой семестр</th>
+                <th>Всего</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>IT</td>
+                <td>Иванов И.И.</td>
+                <td>ИСП 20-2</td>
+                <td>Второй</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>1111111111</td>
+                <td>11111111111</td>
+                <td>1111111111111</td>
+                <td>11111111111</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>1111111111</td>
+                <td>11111111111</td>
+                <td>1111111111111</td>
+                <td>11111111111</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>1111111111</td>
+                <td>11111111111</td>
+                <td>1111111111111</td>
+                <td>11111111111</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>1111111111</td>
+                <td>11111111111</td>
+                <td>1111111111111</td>
+                <td>11111111111</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>1111111111</td>
+                <td>11111111111</td>
+                <td>1111111111111</td>
+                <td>11111111111</td>
+                <td>Электротехника</td>
+                <td>78</td>
+                <td>78</td>
+                <td>156</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
-        <!-- TABLE -->
-        <section id="table__wrapper">
-            <section id="table__scroll">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Специальность</th>
-                        <th>Дисциплина</th>
-                        <th>Группы</th>
-                        <th>Преподаватель</th>
-                        <th>Курс</th>
-                        <th>Дкр 1-ый семестр</th>
-                        <th>Итог 2-ой семестр</th>
-                        <th>Всего</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИСП 20-2</td>
-                        <td>Второй</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                    <tr>
-                        <td>1111111111</td>
-                        <td>11111111111</td>
-                        <td>1111111111111</td>
-                        <td>11111111111</td>
-                        <td>Электротехника</td>
-                        <td>78</td>
-                        <td>78</td>
-                        <td>156</td>
-                    </tr>
-                </tbody>
-                </table>
-            </section>
-        </section>
+      </section>
     </article>
     <script src="js/main.js"></script>
     <script src="js/filter.js"></script>
-</body>
+  </body>
 </html>

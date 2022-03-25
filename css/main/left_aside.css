@@ -33,19 +33,39 @@ aside nav a{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.05em;
+    position: relative;
+    overflow: hidden;
+    border-bottom:1px solid transparent ;
 }
+
 aside nav a:active > i.fa{
     transform: translateY(-5px);
 }
-aside nav a.active{
-    background: linear-gradient(to left, var(--secondOrange), var(--mainOrange));
+
+aside nav a span{
+    position: relative;
+    z-index: 1;
 }
-aside nav a:hover{
-    background: linear-gradient(to left, var(--secondOrange), var(--mainOrange));
-    animation: gradient .5s forwards;
+aside nav a::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--mainOrange);
+    transition: width 0.5s, height 0.5s;
 }
-aside nav a:last-child{
-    border: none;
+aside nav a.active::before{
+    background-color: var(--mainOrange);
+    width: 700px;
+    height: 700px;
+}
+aside nav a:hover::before{
+    width: 700px;
+    height: 700px;
 }
 /* Icons */
 nav .fa{

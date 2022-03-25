@@ -21,6 +21,7 @@ for(let input of inputs){
 
 let modalBtn = document.querySelector('#export');
 let modalWindow = document.querySelector('#modal__export');
+
 modalBtn.addEventListener('click', function(){
     modalWindow.classList.remove('hidden');
     setTimeout(() =>{

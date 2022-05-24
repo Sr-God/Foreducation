@@ -23,9 +23,10 @@
         border: 0;
         background: #262322 center / contain no-repeat url(../../media/user-mob.png);
         background-size: 85%;
+        margin-left: 5px;
     }
     aside .info{
-        width: 200px;
+        width: 180px;
         min-height: 60px;
         flex-flow: column wrap;
         margin-left: 5px;
@@ -57,19 +58,77 @@
     }
     aside nav{
         position: absolute;
-        width: 145px;
-        height: 223px;
+        width: 230px;
+        height: 300px;
         display: none;
+        background-color: var(--secondGray);
+        right: 0;
+        z-index: 6;
+        border-radius: 0;
+        min-height: 0;
+        margin: 0;
     }
     aside nav a{
-        line-height: 0;
-        font-size: .8em;
-        padding: 0;
+        padding: 0 0 0 10px;
+        border-bottom: 0px;
     }
-    aside nav a::before{
-        display: none;
+    aside nav a span{
+        width: 100%;
+        line-height: 20px;
+        
+    }
+    aside nav a.active{
+        background-color: #F24E1E;
+        z-index: 5;
+        position: relative;
+    }
+    aside nav a.active:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        border: 50px solid transparent;
+        border-right: 100px solid var(--secondGray);
+        z-index: 5;
+        content: '';
+        position: absolute;
+        top: -33px;
+        left: 100px;
+        transform: none;
+        width: 0;
+        height: 0;
+        border-radius: 0;
+        transition: 0;
     }
    article.right{
        display: none;
    }
+
+    /* Menu btn */
+    .menuBtn{
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #262322 center / contain no-repeat url(../../media/);
+        margin-left: 5px;
+        z-index: 6;
+    }
+    .open{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 2px;
+        top: 2px;
+        background: #262322 center / contain no-repeat url(../../media/);
+    }
+    .openNav::after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: -5px;
+        top: -2px;
+        width: 5000%;
+        height: 1000px;
+        background-color: rgba(0,0,0, 0.5);
+    }
 }

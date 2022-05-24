@@ -129,3 +129,6 @@ aside .user .info .name__user{
 .settings .exit:hover{
     color: var(--mainOrange);
 }
+.menuBtn{
+    display: none;
+}

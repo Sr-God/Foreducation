@@ -30,12 +30,12 @@
       <a href="https://www.kolledge39.ru/" class="logo"></a>
       <!-- NAV -->
       <nav>
-        <a href="load.html" class="nav__btn"><span><i class="fa fa-bar-chart-o"></i> Нагрузка</span></a>
+        <a href="load.html" class="nav__btn active"><span><i class="fa fa-bar-chart-o"></i> Нагрузка</span></a>
         <a href="report.html" class="nav__btn"><span><i class="fa fa-pencil-square-o"></i> Отчётность</span></a>
         <a href="exams.html" class="nav__btn"><span><i class="fa fa-calendar-check-o"></i> Экзамены</span></a>
         <a href="report.html" class="nav__btn"><span><i class="fa fa-calendar"></i> Зачёты</span></a>
         <a href="dkr.thml" class="nav__btn"><span><i class="fa fa-folder-open"></i> Дкр</span></a>
-        <a href="list.html" class="active nav__btn"><span><i class="fa fa-address-book-o"></i> Список студентов</span></a>
+        <a href="list.html" class="nav__btn"><span><i class="fa fa-address-book-o"></i> Список студентов</span></a>
         <a href="progress.html" class="nav__btn"><span><i class="fa fa-th-list"></i> Успеваемость</span></a>
         <a href="debt.html" class="nav__btn"><span><i class="fa fa-exclamation-circle"></i> Задолжности</span></a>
         <a href="http://78.155.191.46:8081/region_pou_secured/region.cgi" class="nav__btn"><span><i class="fa fa-book"></i> Журнал</span></a>
@@ -50,6 +50,7 @@
         <div class="settings">
           <a href="index.html" class="exit">Выйти</a>
         </div>
+        <div class="menuBtn"></div>
       </div>
     </aside>
     <!-- RIGHT ARTICLE -->
@@ -86,21 +87,8 @@
           ></label>
           <!-- --------- SUB-FILTER --------- -->
           <div class="sub__filter sub__hours"></div>
-          <!-- --------- FILTER --------- -->
-          <input class="input__filters" id="sort" type="checkbox" />
-          <label class="button__sort filters__button" for="sort"
-            >Сортировать <i class="fa fa-angle-down"></i
-          ></label>
-          <!-- --------- SUB-FILTER --------- -->
-          <div class="sub__filter sub__sort">
-            <a class="sub_sort_btn selected" href="?sortby=teachers"
-              >Преподаватель</a
-            >
-            <a class="sub_sort_btn" href="?sortby=lessons">Дисциплина</a>
-            <a class="sub_sort_btn" href="?sortby=otd">Отделение</a>
-            <a class="sub_sort_btn" href="?sortby=group">Группа</a>
-            <a class="sub_sort_btn" href="?sortby=course">Курс</a>
-          </div>
+          
+          
         </div>
       </section>
       <!-- TABLE -->
@@ -109,14 +97,14 @@
           <table>
             <thead>
               <tr>
-                <th>Специальность</th>
-                <th>Дисциплина</th>
-                <th>Группы</th>
-                <th>Преподаватель</th>
-                <th>Курс</th>
-                <th>Дкр 1-ый семестр</th>
-                <th>Итог 2-ой семестр</th>
-                <th>Всего</th>
+                <th>Специальность <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Дисциплина <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Группы <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Преподаватель <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Курс <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Дкр 1-ый семестр <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Итог 2-ой семестр <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
+                <th>Всего <a href=""> ∨ </a> <a href=""> ∧ </a> </th>
               </tr>
             </thead>
             <tbody>
@@ -415,7 +403,9 @@
         </section>
       </section>
     </article>
+
     <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
     <script src="js/filter.js"></script>
   </body>
 </html>

@@ -8,17 +8,65 @@
         background:  center / contain no-repeat url(../../media/logo_mob.png), #262322;
         width: 43px;
         height: 50px;
-        margin: 5px 0 0 5px;
+        margin: 5px -5px 0 0;
         border-radius: 2px;
     }
     aside .user{
-        justify-content: space-between;
+        justify-content: start;
         width: 350px;
-        height: 60px;
+        min-height: 60px;
         background-color: var(--mainGray);
 
     }
+    aside .user .avatar{
+        border-radius: 2px;
+        border: 0;
+        background: #262322 center / contain no-repeat url(../../media/user-mob.png);
+        background-size: 85%;
+    }
+    aside .info{
+        width: 200px;
+        min-height: 60px;
+        flex-flow: column wrap;
+        margin-left: 5px;
+    }
+    aside .user .info .name__user{
+        color: transparent;
+        margin-top: 5px;
+    }
+    aside .user .info .name__user:after{
+        color: #F24E1E;
+        content: "ИМЯ ФАМИЛИЯ";
+        margin-left: -110px;
+        font-weight: bold;
+        font-style: normal;
+    }
+    aside .user .info > p{
+        padding: 0;
+        margin-top: 5px;
+    }
+    aside .user .settings{
+        width: 50px;
+        height: 50px;
+        background-size: 85%;
+        border-radius: 2px;
+        background: #262322 center / contain no-repeat url(../../media/exit.png);
+    }
+    aside .user .settings .exit{
+        display: none;
+    }
     aside nav{
+        position: absolute;
+        width: 145px;
+        height: 223px;
+        display: none;
+    }
+    aside nav a{
+        line-height: 0;
+        font-size: .8em;
+        padding: 0;
+    }
+    aside nav a::before{
         display: none;
     }
    article.right{

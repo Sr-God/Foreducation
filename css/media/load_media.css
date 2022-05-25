@@ -4,6 +4,8 @@
         width: 100%;
         height: 60px;
     }
+       /* Logo */
+
     aside .logo{
         background:  center / contain no-repeat url(../../media/logo_mob.png), #262322;
         width: 43px;
@@ -11,6 +13,8 @@
         margin: 5px -5px 0 0;
         border-radius: 2px;
     }
+       /* User */
+
     aside .user{
         justify-content: start;
         width: 350px;
@@ -18,18 +22,21 @@
         background-color: var(--mainGray);
 
     }
+       /* Avatar */
+
     aside .user .avatar{
         border-radius: 2px;
         border: 0;
         background: #262322 center / contain no-repeat url(../../media/user-mob.png);
         background-size: 85%;
-        margin-left: 5px;
     }
+       /* Info */
+
     aside .info{
         width: 180px;
         min-height: 60px;
         flex-flow: column wrap;
-        margin-left: 5px;
+        margin-left: 10px;
     }
     aside .user .info .name__user{
         color: transparent;
@@ -46,6 +53,8 @@
         padding: 0;
         margin-top: 5px;
     }
+       /* Exit */
+
     aside .user .settings{
         width: 50px;
         height: 50px;
@@ -56,6 +65,8 @@
     aside .user .settings .exit{
         display: none;
     }
+       /* Nav */
+
     aside nav{
         position: absolute;
         width: 230px;
@@ -100,18 +111,19 @@
         border-radius: 0;
         transition: 0;
     }
-   article.right{
-       display: none;
-   }
+   
 
     /* Menu btn */
+
     .menuBtn{
         display: block;
         width: 50px;
         height: 50px;
-        background: #262322 center / contain no-repeat url(../../media/);
-        margin-left: 5px;
+        background: #262322 center / contain no-repeat url(../../media/burger.png);
+        background-size: 80%;
+        margin-left: 8px;
         z-index: 6;
+        border-radius: 2px;
     }
     .open{
         position: absolute;
@@ -119,7 +131,8 @@
         height: 30px;
         right: 2px;
         top: 2px;
-        background: #262322 center / contain no-repeat url(../../media/);
+        background: #262322 center / contain no-repeat url(../../media/close.png);
+        background-size: 80%;
     }
     .openNav::after{
         content: '';
@@ -131,4 +144,30 @@
         height: 1000px;
         background-color: rgba(0,0,0, 0.5);
     }
+       /* Article */
+
+    .body{
+        flex-direction: column;
+    }
+    article .theme{
+        display: none;
+    }
+    article .filters{
+        display: none;
+    }
+        /* Table */
+    section#table__wrapper{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+    }
+    section#table__scroll{
+        border-radius: 0;
+    }
+        /* thead */
+    table thead tr th{
+        padding: 0;
+    }
+        /* tbody */
+    
 }
